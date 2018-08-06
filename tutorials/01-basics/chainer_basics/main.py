@@ -184,7 +184,7 @@ class ResNetFineTune(chainer.Chain):
     def __init__(self, out_size):
         super(ResNetFineTune, self).__init__()
         self.base = chainer.links.ResNet50Layers(pretrained_model='auto')
-        # base will not be updated because it is defined out from init_scope context.
+        # base will not be updated because it is defined out of init_scope context.
 
         with self.init_scope():
             # Layers defined in init_scope context are updated.
